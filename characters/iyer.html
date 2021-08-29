@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        <link rel="stylesheet" href="../assets/css/char.css">
+
+        <title>TMKOC Fandom</title>
+        <style>
+            body {
+                margin: 3.5 0 0 0;
+                padding: 1rem 1rem 0;
+                background-image: url(/assets/img/back.jpg);
+                background-repeat: repeat-y;
+                background-size: cover;
+                font-family: Montserrat
+            }
+        </style>
+    </head>
+    <body>
+
+        <header class="header">
+            <div class="header-container">
+                <li style="list-style: none; margin-left: 90%; margin-top: 1%;"><img src="../assets/img/theme/moon.png" alt="" class="header-img" id="icon"></li>
+                <div class="header-toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="banner"></div>
+
+        <div class="nav" id="navbar">
+            <nav class="nav-container">
+                <div>
+                    <a href="#" class="nav-link nav-logo">
+                        <i class='bx bxs-tag-alt nav-icon' style="font-size: 2rem;"></i>
+                        <span class="nav-logo-name" style="color: white;">FANDOM</span>
+                    </a>
+    
+                    <div class="nav-list">
+                        <div class="nav-items">
+    
+                            <a href="../index.html" class="nav-link">
+                                <i class='bx bx-home nav-icon' style="font-size: 2rem;"></i>
+                                <span class="nav-name">Home</span>
+                            </a>
+                            
+                        
+                            <a href="../characters.html" class="nav-link">
+                                <i class='bx bx-user nav-icon' style="font-size: 2rem;"></i>
+                                <span class="nav-name">characters</span>
+                            </a>
+                            
+
+                            <a href="#" class="nav-link">
+                                <i class='bx bx-message-rounded nav-icon' style="font-size: 2rem;"></i>
+                                <span class="nav-name">Discussion</span>
+                            </a>
+
+                            <a href="#" class="nav-link">
+                                <i class='bx bx-shopping-bag nav-icon' style="font-size: 2rem;"></i>
+                                <span class="nav-name">Merch</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="nav-link nav-logout">
+                    <i class='bx bx-log-in nav-icon' style="font-size: 2rem;"></i>
+                    <span class="nav-name">Log In</span>
+                </a>
+            </nav>
+        </div>
+        <main>
+            <section class="char">
+                <h1 class="char-head">characters</h1>
+                <p class="char-p"><a href="../index.html">Home </a>/ <a href="../characters.html">characters</a></p>
+                <div class="row" style="margin-left: 20%;">
+                    <div class="column" style="color: white;">
+                      <h2 style="font-size: 3rem;">Krishnan Subramaniam Iyer
+                    </h2>
+                      <p style="font-size: 1.5rem;">Krishnan Subramaniam Iyer is from South India and originally belong to Chennai and thus, his Hindi is not very clear. Iyer's dark complexion is just opposite of his beautiful wife, Babita. Iyer is a scientist. However, he is not very intelligent and often fall victim to fraud. He is very protective about Babita and skeptic about intentions of Jethalal.</p>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="column1">
+                        <img src="/assets/img/char/iyer.jpg" style="border-radius: 15px;" alt="">
+                    </div>
+                  </div>
+            </section>
+            <br>
+            <br>
+        </main>
+
+        <!--========== MAIN JS ==========-->
+        <script src="assets/js/main.js"></script>
+        <script>
+            icon.onclick = function () {
+                document.body.classList.toggle("light-theme");
+                if(document.body.classList.contains("light-theme")){
+                    icon.src = "/assets/img/theme/sun.png";
+                }
+                else{
+                    icon.src = "/assets/img/theme/moon.png";
+                }
+            }
+        </script>
+    </body>
+</html>

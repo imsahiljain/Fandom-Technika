@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>TMKOC Fandom</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-container">
+                <li style="list-style: none; margin-left: 90%; margin-top: 1%;"><img src="assets/img/theme/moon.png" alt="" class="header-img" id="icon"></li>
+                <div class="header-toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="banner"></div>
+
+        
+        <div class="nav" id="navbar">
+            <nav class="nav-container">
+                <div>
+                    <a href="#" class="nav-link nav-logo">
+                        <i class='bx bxs-tag-alt nav-icon' style="font-size: 2rem;"></i>
+                        <span class="nav-logo-name">TMKOC</span>
+                    </a>
+    
+                    <div class="nav-list">
+                        <div class="nav-items">
+    
+                            <a href="index.html" class="nav-link">
+                                <i class='bx bx-home nav-icon' style="font-size: 2rem;"></i>
+                                <span class="nav-name">Home</span>
+                            </a>
+                            
+                        
+                            <a href="characters.html" class="nav-link">
+                                <i class='bx bx-user nav-icon' style="font-size: 2rem;"></i>
+                                <span class="nav-name">Characters</span>
+                            </a>
+                            
+
+                            <a href="discussion.html" class="nav-link">
+                                <i class='bx bx-message-rounded nav-icon' style="font-size: 2rem;"></i>
+                                <span class="nav-name">Discussion</span>
+                            </a>
+
+                            <a href="merch.html" class="nav-link">
+                                <i class='bx bx-shopping-bag nav-icon' style="font-size: 2rem;"></i>
+                                <span class="nav-name">Merch</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="nav-link nav-logout">
+                    <i class='bx bx-log-in nav-icon' style="font-size: 2rem;"></i>
+                    <span class="nav-name">Log In</span>
+                </a>
+            </nav>
+        </div>
+
+
+        <main>
+            <section class="banner">
+                <h1 id="banner-head">TMKOC FANDOM</h1>
+                <div>
+                    <p id="banner-p">Taarak Mehta Ka Ooltah Chashmah is a Hindi sitcom based on the weekly column "Duniya Ne Undha Chasma" by Taarak Mehta in Chitralekha magazine. It is produced by Asit Kumarr Modi. It premiered on 28 July 2008 and airs on Sony SAB. The series is one of the longest-running Indian sitcoms by episode count</p>
+                </div>
+                <div class="btn-main">
+                <button onclick="location.href = 'characters.html';" class="char-btn">Characters</button>
+                <button onclick="location.href = 'merch.html';" class="char-btn">Merch</button>
+            </div>
+            </section>
+        </main>
+
+
+        <script src="assets/js/main.js"></script>
+        <script>
+            icon.onclick = function () {
+                document.body.classList.toggle("light-theme");
+                if(document.body.classList.contains("light-theme")){
+                    icon.src = "/assets/img/theme/sun.png";
+                }
+                else{
+                    icon.src = "/assets/img/theme/moon.png";
+                }
+            }
+        </script>
+    </body>
+</html>

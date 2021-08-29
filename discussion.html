@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/char.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <title>TMKOC Fandom</title>
+        
+        <style>
+        body {
+            margin: 3.5 0 0 0;
+            padding: 1rem 1rem 0;
+            background-image: url(/assets/img/back.jpg);
+            background-repeat: repeat-y;
+            background-size: cover;
+            font-family: Montserrat;
+        }
+        
+        .container {
+            width: 70%;
+            min-height: 440px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.26);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(10.5px);
+            -webkit-backdrop-filter: blur(19.5px);
+            border-radius: 10px;
+            border-radius: 8px;
+            padding: 20px
+        }
+
+        .comment {
+            display: block;
+            transition: all 1s
+        }
+
+        .commentClicked {
+            color: white;
+            min-height: 0;
+            border: 5px solid #fff;
+            box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+            border-radius: 5px;
+            padding: 5px 10px
+        }
+
+        .container textarea {
+            width: 100%;
+            border: 0;
+            font-family: Montserrat;
+            background: #fff;
+            font-size: 1.7rem;
+            padding: 5px 10px;
+            height: 50%;
+            border-radius: 5px 5px 0 0;
+            transition: all .2s;
+            margin-top: 15px
+        }
+
+        button.primaryContained {
+            font-family: Montserrat;
+            color: #000;
+            font-size: 20px;
+            font-weight: 500;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px 15px;
+            border: 0;
+            margin-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
+            cursor: pointer
+        }
+
+        button.primaryContained:hover {
+            text-decoration: underline
+        }
+        </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <li style="list-style: none; margin-left: 90%; margin-top: 1%;"><img src="assets/img/theme/moon.png" alt="" class="header-img" id="icon"></li>
+            <div class="header-toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner"></div>
+
+    
+    <div class="nav" id="navbar">
+        <nav class="nav-container">
+            <div>
+                <a href="#" class="nav-link nav-logo">
+                    <i class='bx bxs-tag-alt nav-icon' style="font-size: 2rem;"></i>
+                    <span class="nav-logo-name" style="color: white;">TMKOC</span>
+                </a>
+
+                <div class="nav-list">
+                    <div class="nav-items">
+
+                        <a href="index.html" class="nav-link">
+                            <i class='bx bx-home nav-icon' style="font-size: 2rem;"></i>
+                            <span class="nav-name">Home</span>
+                        </a>
+                        
+                    
+                        <a href="characters.html" class="nav-link">
+                            <i class='bx bx-user nav-icon' style="font-size: 2rem;"></i>
+                            <span class="nav-name">Characters</span>
+                        </a>
+                        
+
+                        <a href="discussion.html" class="nav-link">
+                            <i class='bx bx-message-rounded nav-icon' style="font-size: 2rem;"></i>
+                            <span class="nav-name">Discussion</span>
+                        </a>
+
+                        <a href="merch.html" class="nav-link">
+                            <i class='bx bx-shopping-bag nav-icon' style="font-size: 2rem;"></i>
+                            <span class="nav-name">Merch</span>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <a href="#" class="nav-link nav-logout">
+                <i class='bx bx-log-in nav-icon' style="font-size: 2rem;"></i>
+                <span class="nav-name">Log In</span>
+            </a>
+        </nav>
+    </div>
+
+
+    <main>
+        <section class="char">
+           <h1 class="char-head">DISCUSSION</h1>
+           <section id="app">
+              <div class="container">
+                 <div class="row">
+                    <div class="col-6">
+                       <div class="comment">
+                          <p v-for="items in item" v-text="items" style="color: white; font-size: 1.5rem;"></p>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-6">
+                       <textarea type="text" class="input" placeholder="Write your comment here...." v-model="newItem" @keyup.enter="addItem()"></textarea>
+                       <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+                    </div>
+                 </div>
+              </div>
+           </section>
+        </section>
+     </main>
+
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        icon.onclick = function () {
+            document.body.classList.toggle("light-theme");
+            if (document.body.classList.contains("light-theme")) {
+                icon.src = "/assets/img/theme/sun.png";
+            } else {
+                icon.src = "/assets/img/theme/moon.png";
+            }
+        }
+    </script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
